@@ -1,0 +1,201 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0f0f0f;--ink2:#444;--ink3:#888;
+  --surface:#f9f8f5;--card:#fff;--accent:#1a1a2e;
+  --gold:#c8973a;--goldl:#f5e6c8;
+  --teal:#0d7377;--teall:#d4f0f2;
+  --violet:#5c3d9e;--violetl:#ede8fb;
+  --green:#1f6b3e;--greenl:#e0f5ea;
+  --border:rgba(0,0,0,0.08);
+  --radius:14px;
+}
+body{font-family:'Outfit',sans-serif;background:var(--surface);color:var(--ink);line-height:1.6}
+.wrap{max-width:700px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+.hero{text-align:center;padding:3rem 0 2.5rem}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink3);margin-bottom:1rem}
+.hero-name{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,7vw,3.8rem);line-height:1.05;color:var(--accent);margin-bottom:0.4rem}
+.hero-name em{font-style:italic;color:var(--gold)}
+.hero-tagline{font-size:1rem;color:var(--ink2);font-weight:300;max-width:400px;margin:0.7rem auto 1.6rem}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:1.6rem}
+.tag{font-family:'DM Mono',monospace;font-size:11px;padding:5px 14px;border-radius:40px;border:1px solid var(--border);color:var(--ink2);background:var(--card)}
+.social-row{display:flex;gap:10px;justify-content:center;margin-bottom:2rem}
+.social-btn{display:inline-flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:11px;padding:7px 16px;border-radius:8px;text-decoration:none;cursor:pointer;border:1px solid var(--border);color:var(--ink2);background:var(--card);transition:background 0.15s}
+.social-btn:hover{background:#f0ede6}
+.social-btn svg{width:14px;height:14px;flex-shrink:0}
+.divider{width:40px;height:1.5px;background:var(--gold);margin:0 auto 2.5rem}
+.section-label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:1.4rem}
+.projects{display:flex;flex-direction:column;gap:1.2rem}
+.proj{background:var(--card);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;transition:box-shadow 0.2s}
+.proj:hover{box-shadow:0 4px 24px rgba(0,0,0,0.08)}
+.proj-header{padding:1.4rem 1.5rem 0}
+.proj-meta{display:flex;align-items:center;gap:10px;margin-bottom:0.8rem}
+.proj-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink3)}
+.proj-badge{font-family:'DM Mono',monospace;font-size:10px;padding:3px 10px;border-radius:40px;font-weight:500}
+.badge-star{background:var(--goldl);color:#7a5010}
+.badge-fin{background:var(--teall);color:#0a4f53}
+.badge-cv{background:var(--violetl);color:var(--violet)}
+.badge-dash{background:var(--greenl);color:var(--green)}
+.proj-title{font-family:'DM Serif Display',serif;font-size:1.3rem;line-height:1.2;color:var(--accent);margin-bottom:0.7rem}
+.proj-body{padding:0 1.5rem 1.4rem}
+.proj-desc{font-size:0.92rem;color:var(--ink2);margin-bottom:1rem;line-height:1.65}
+.highlight-bar{background:var(--surface);border-left:3px solid;border-radius:0 8px 8px 0;padding:0.6rem 1rem;margin-bottom:1rem;font-size:0.85rem;color:var(--ink2)}
+.hb-gold{border-color:var(--gold)}
+.hb-teal{border-color:var(--teal)}
+.hb-violet{border-color:var(--violet)}
+.proj-stack{display:flex;flex-wrap:wrap;gap:6px}
+.stack-tag{font-family:'DM Mono',monospace;font-size:10px;padding:3px 10px;border-radius:6px;background:var(--surface);border:1px solid var(--border);color:var(--ink2)}
+.contact{margin-top:3rem;text-align:center;padding:2rem;background:var(--accent);border-radius:var(--radius)}
+.contact h3{font-family:'DM Serif Display',serif;font-size:1.4rem;color:#fff;margin-bottom:0.3rem}
+.contact p{font-size:0.88rem;color:rgba(255,255,255,0.6);margin-bottom:1.2rem}
+.contact-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.clink{font-family:'DM Mono',monospace;font-size:11px;padding:8px 18px;border-radius:8px;background:rgba(255,255,255,0.12);color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,0.15);cursor:pointer}
+.clink:hover{background:rgba(255,255,255,0.2)}
+</style>
+
+<div class="wrap">
+  <div class="hero">
+    <p class="hero-eyebrow">AI / ML Portfolio</p>
+    <h1 class="hero-name">Ayush <em>Gautam</em></h1>
+    <p class="hero-tagline">Machine Learning Engineer specialising in deep learning, computer vision, NLP, and financial analytics</p>
+    <div class="hero-tags">
+      <span class="tag">PyTorch</span>
+      <span class="tag">TensorFlow</span>
+      <span class="tag">Python</span>
+      <span class="tag">Streamlit</span>
+      <span class="tag">XGBoost</span>
+      <span class="tag">OpenCV</span>
+      <span class="tag">NLP</span>
+      <span class="tag">FinTech</span>
+    </div>
+    <div class="social-row">
+      <a class="social-btn" href="https://github.com/Ayush-Gautam-016" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <a class="social-btn" href="https://linkedin.com/in/ayush-gautam-89098623b" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+    </div>
+    <div class="divider"></div>
+  </div>
+
+  <p class="section-label">Featured projects</p>
+
+  <div class="projects">
+
+    <div class="proj">
+      <div class="proj-header">
+        <div class="proj-meta">
+          <span class="proj-num">01</span>
+          <span class="proj-badge badge-star">★ Strongest AI Project</span>
+        </div>
+        <h2 class="proj-title">Hindi Speech Emotion Recognition<br>with Explainable AI</h2>
+      </div>
+      <div class="proj-body">
+        <p class="proj-desc">Built a CNN-GRU-Attention model to classify Hindi speech into 8 emotions using MFCC features. Developed a Streamlit app supporting real-time audio upload and recording, live predictions, explainability visualisations, and full model evaluation.</p>
+        <div class="highlight-bar hb-gold">
+          Combines deep learning architecture design, audio signal processing, and XAI — showcasing end-to-end ML product thinking.
+        </div>
+        <div class="proj-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">PyTorch</span>
+          <span class="stack-tag">Streamlit</span>
+          <span class="stack-tag">Librosa</span>
+          <span class="stack-tag">MFCC</span>
+          <span class="stack-tag">CNN-GRU</span>
+          <span class="stack-tag">Attention</span>
+          <span class="stack-tag">Explainable AI</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-header">
+        <div class="proj-meta">
+          <span class="proj-num">02</span>
+          <span class="proj-badge badge-cv">Computer Vision</span>
+        </div>
+        <h2 class="proj-title">Real-Time Face Mask Detection<br>Using Computer Vision</h2>
+      </div>
+      <div class="proj-body">
+        <p class="proj-desc">Built a real-time computer vision system using MobileNetV2 and OpenCV to detect face-mask usage from live webcam video. The system outputs bounding-box predictions per frame, enabling instant visual feedback in real-world conditions.</p>
+        <div class="highlight-bar hb-violet">
+          Demonstrates applied computer vision with a lightweight, deployable architecture suitable for edge and production environments.
+        </div>
+        <div class="proj-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">TensorFlow / Keras</span>
+          <span class="stack-tag">OpenCV</span>
+          <span class="stack-tag">MobileNetV2</span>
+          <span class="stack-tag">Transfer Learning</span>
+          <span class="stack-tag">Real-Time CV</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-header">
+        <div class="proj-meta">
+          <span class="proj-num">03</span>
+          <span class="proj-badge badge-fin">★ Key for FinTech</span>
+        </div>
+        <h2 class="proj-title">Credit Card Fraud Detection<br>Using XGBoost</h2>
+      </div>
+      <div class="proj-body">
+        <p class="proj-desc">Built an imbalanced classification model for financial fraud detection using XGBoost. Focused on business-critical metrics — recall, precision, PR-AUC, and ROC-AUC — and explored the real-world trade-off between fraud capture rate and false positive costs.</p>
+        <div class="highlight-bar hb-teal">
+          Addresses the core challenge of imbalanced financial data, directly applicable to risk, compliance, and fraud analytics roles.
+        </div>
+        <div class="proj-stack">
+          <span class="stack-tag">Python / R</span>
+          <span class="stack-tag">XGBoost</span>
+          <span class="stack-tag">SMOTE</span>
+          <span class="stack-tag">PR-AUC</span>
+          <span class="stack-tag">ROC-AUC</span>
+          <span class="stack-tag">Fraud Analytics</span>
+          <span class="stack-tag">Classification</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-header">
+        <div class="proj-meta">
+          <span class="proj-num">04</span>
+          <span class="proj-badge badge-dash">Dashboard</span>
+        </div>
+        <h2 class="proj-title">Financial Risk Analytics Dashboard</h2>
+      </div>
+      <div class="proj-body">
+        <p class="proj-desc">Built an interactive Streamlit dashboard for financial risk analysis. Displays transaction data, fraud probability scores, customer risk tiers, and behavioural charts — with a one-click downloadable PDF report for stakeholder reporting.</p>
+        <div class="highlight-bar" style="border-color:var(--green)">
+          Bridges ML outputs and business stakeholders — shows the ability to turn model results into actionable, presentation-ready dashboards.
+        </div>
+        <div class="proj-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">Streamlit</span>
+          <span class="stack-tag">Pandas</span>
+          <span class="stack-tag">Plotly</span>
+          <span class="stack-tag">Risk Scoring</span>
+          <span class="stack-tag">Customer Segmentation</span>
+          <span class="stack-tag">PDF Report</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="contact">
+    <h3>Ayush Gautam — Open to opportunities</h3>
+    <p>Machine Learning · FinTech · NLP · Computer Vision · Risk Analytics</p>
+    <div class="contact-links">
+      <span class="clink" onclick="sendPrompt('Write a LinkedIn About section for Ayush Gautam based on this portfolio')">LinkedIn About ↗</span>
+      <span class="clink" onclick="sendPrompt('Write a FinTech ML cover letter for Ayush Gautam based on this portfolio')">Cover letter ↗</span>
+      <span class="clink" onclick="sendPrompt('Build the Streamlit code for the Financial Risk Analytics Dashboard project')">Build dashboard ↗</span>
+    </div>
+  </div>
+</div>
